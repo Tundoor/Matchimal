@@ -5,17 +5,18 @@
 }
 
 body {
-    background-color: #E6CAFF;
+    background-color: #f0dfff;
+    height: 100%;
 }
 
 /*nav Bar */
 
 #nav-bar {
-    background-color: #c27cff;
+    background-color: #dab0ff;
     margin-top: auto;
     width: 100%;
     height: 50px;
-    position: fixed;
+    position: absolute;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -31,7 +32,8 @@ body {
 .logo h1 {
     margin-left: 20px;
     font-weight: 900;
-    font-style: italic;
+    font-family: "Dancing Script", cursive;
+    font-weight: 900;
     color: white;
 }
 
@@ -41,12 +43,10 @@ body {
 
 /* Footer section */
 footer {
-    background-color: #c27cff;
+    background-color: #dab0ff;
     margin-top: auto;
     width: 100%;
     height: 120px;
-    position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,6 +83,76 @@ footer p {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+
+
+/*Home Page */
+
+.content {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-div {
+    background-color: white;
+    height: 500px;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.User-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Buttons-Div {
+    z-index: 2;
+}
+
+.Btn {
+    margin-right: 10px;
+}
+
+.user {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.Name {
+    font-size: 1.7rem;
+}
+
+.Age {
+    font-size: 1.7rem;
+}
+
+.User-desc {
+    margin-right: 15px;
+    font-size: 1rem;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+}
+
+.User-desc h1 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.picture {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
 
 /* Media Queries */
 
