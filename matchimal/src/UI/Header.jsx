@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Header() {
 
     return (
@@ -6,9 +8,9 @@ function Header() {
                 <nav id="nav-bar">
                     <div class="logo" id="logo">
                         <img src="./src/assets/favicon/favicon-32x32.png" alt="Matchimal Logo" id="logo-img" />
-                        <h1 id="logo-title">Matchimal</h1>
+                        <Link to="/" id="home-link"><h1 id="logo-title">Matchimal</h1></Link>
                     </div>
-                    <a id="nav-link" href=""><img src="./src/assets/icons/icons8-user-30.png"></img></a>
+                    <Link id="nav-link" to="./personal"><img src="./src/assets/icons/icons8-user-30.png"></img></Link>
                 </nav>
             </header>
         </>
