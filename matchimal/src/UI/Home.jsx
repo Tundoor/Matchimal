@@ -4,6 +4,7 @@ import Footer from "./Footer.jsx"
 
 function Home() {
 
+  localStorage.clear()
   const [pics, setPics] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,21 @@ function Home() {
         setLoading(false);
       });
   }, []);
+
+
+  // Favourites logic starts
+
+  let Favourites = JSON.parse(localStorage.getItem("Favourites") || "[]");
+  function Match(index) {
+    Favourites.push(
+      pics[index]
+    )
+
+    localStorage.setItem("Favourites", JSON.stringify(Favourites))
+    console.log(Favourites)
+  }
+
+  // favourite logic ends
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -54,7 +70,7 @@ function Home() {
                       src="./src/assets/icons/icons8-tick-48.png"
                       id="accept-btn"
                       className="Btn"
-                      onClick={() => Match()}
+                      onClick={() => Match(index)}
                     />
                     <img
                       src="./src/assets/icons/icons8-cross-48.png"

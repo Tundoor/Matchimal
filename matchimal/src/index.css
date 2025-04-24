@@ -180,11 +180,21 @@ footer p {
 
 }
 
+.Back-Home-Btn {
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
 .Account-Page-header {
     display: flex;
     height: 500px;
     width: 100%;
     padding: 90px;
+
+    /* Makes it closer to home button */
 
 }
 
@@ -204,8 +214,31 @@ h1 {
     margin-bottom: 15px;
 }
 
+.Account-Page-Edit {
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: auto;
+    position: relative;
+    z-index: 5;
+}
+
+.Account-Page-Edit button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    background-color: #cecccc;
+}
+
+
+/* Liked Accounsts sections */
+
 .Account-Page-Main {
     background-color: #dab0ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
 }
 
 hr {
@@ -213,6 +246,7 @@ hr {
     height: 2px;
     border-radius: 0;
 }
+
 
 /* Media Queries */
 

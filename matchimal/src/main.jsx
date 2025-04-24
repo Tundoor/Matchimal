@@ -8,12 +8,11 @@ import Personal from "./UI/Personal.jsx"
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/personal" element={<Personal />}></Route>
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/personal" element={<Personal />}></Route>
+      </Routes>
+
     </BrowserRouter>
   </StrictMode>,
 )

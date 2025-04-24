@@ -1,11 +1,12 @@
-import Header from "./Header.jsx"
 import Footer from "./Footer.jsx"
-
+import { Link } from "react-router-dom"
 
 function Personal() {
     return (
         <>
-            <Header />
+            <div className="Back-Home-Btn">
+                <Link to="/" onClick={() => console.log("Link clicked!")}><img src="./src/assets/icons/icons8-home-30.png"></img></Link>
+            </div>
             <div className="Personal">
                 <div className="Account-Page-header">
 
@@ -24,14 +25,15 @@ function Personal() {
                             </p>
                         </div>
                     </div>
+                    <div className="Account-Page-Edit">
+                        <button onClick={() => { }}><img src="./src/assets/icons/icons8-edit-24.png"></img></button>
+                    </div>
 
                 </div>
 
-                <div className="Account-Page-Edit">
-                    <button onClick={() => { }}><img></img></button>
-                </div>
 
-                {/* <div className="Account-Page-Main">
+                <div className="Account-Page-Main">
+                    <h1>Your Liked Profiles</h1>
                     <div className="content-div">
                         <img src='https://images.dog.ceo/breeds/terrier-australian/n02096294_8721.jpg' alt="picture of a dog" className="picture"></img>
                         <div className="user">
@@ -55,7 +57,7 @@ function Personal() {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
             <hr></hr>
             <Footer />
