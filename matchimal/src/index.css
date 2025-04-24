@@ -112,7 +112,7 @@ footer p {
 
 .content-div {
     background-color: white;
-    height: 500px;
+    height: 550px;
     width: 350px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -125,7 +125,8 @@ footer p {
 }
 
 .Buttons-Div {
-    z-index: 2;
+    position: relative;
+    z-index: 5;
 }
 
 .Btn {
@@ -134,8 +135,8 @@ footer p {
 }
 
 .user {
-    margin-top: 20px;
-    margin-left: 20px;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 .Name {

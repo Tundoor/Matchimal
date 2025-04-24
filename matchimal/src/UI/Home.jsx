@@ -30,16 +30,21 @@ function Home() {
 
   // Favourites logic starts
 
-  let Favourites = JSON.parse(localStorage.getItem("Favourites") || "[]");
+
+  const [favourites, setFavourites] = useState(() => {
+    return JSON.parse(localStorage.getItem("Favourites") || "[]");
+  });
+
+  // Effect to sync favourites to localStorage
+  useEffect(() => {
+    localStorage.setItem("Favourites", JSON.stringify(favourites));
+  }, [favourites]);
+
+  // Match function to add dog to favourites
   function Match(index) {
-    Favourites.push(
-      pics[index]
-    )
-
-    localStorage.setItem("Favourites", JSON.stringify(Favourites))
-    console.log(Favourites)
+    const updatedFavourites = [...favourites, pics[index]];
+    setFavourites(updatedFavourites);  // Update the state
   }
-
   // favourite logic ends
 
   if (error) {
@@ -61,22 +66,21 @@ function Home() {
               <div className="user">
                 <div className="User-info">
                   <div className="name-age-user">
-                    <h1 className="Name">Name</h1>
-                    <h1 className="Age">Age: </h1>
+                    <h1 className="Name">John Doe</h1>
+                    <h1 className="Age">6 years </h1>
                   </div>
 
                   <div className="Buttons-Div">
                     <img
-                      src="./src/assets/icons/icons8-tick-48.png"
+                      src={
+                        favourites.includes(dog)
+                          ? "./src/assets/icons/icons8-home-30"
+                          : "./src/assets/icons/heart-svgrepo-com (1).svg"
+                      }
                       id="accept-btn"
                       className="Btn"
+                      width="48"
                       onClick={() => Match(index)}
-                    />
-                    <img
-                      src="./src/assets/icons/icons8-cross-48.png"
-                      id="reject-btn"
-                      className="Btn"
-                      onClick={() => Reject()}
                     />
                   </div>
                 </div>
